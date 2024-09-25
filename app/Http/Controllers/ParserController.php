@@ -99,6 +99,9 @@ class ParserController extends Controller
         } else {
             //on txt
 
+            //replace any type of end of line with \n for consistency
+            $pageContent = preg_replace('/\R/', PHP_EOL, $pageContent);
+
             //extract lines
             $lines = explode(PHP_EOL, $pageContent);
 
