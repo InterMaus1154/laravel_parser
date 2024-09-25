@@ -37,4 +37,5 @@
     </div>
     {{--insert javascript--}}
     <script src="{{url('js/script.js')}}"></script>
+    <script src="{{asset('js/script.js')}}"></script>
 </x-layout>

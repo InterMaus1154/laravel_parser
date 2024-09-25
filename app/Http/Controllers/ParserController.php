@@ -110,11 +110,13 @@ class ParserController extends Controller
 
             $htmlContent = "";
 
+            $isArtisanServe = php_sapi_name();
+
             //turn lines to p tags
             foreach ($lines as $line) {
                 if ($this->isImage($line)) {
                     $src = url("images/" . $line);
-                    $htmlContent = $htmlContent . "<img src='$src'/";
+                    $htmlContent = $htmlContent . "<img src='$src' />";
                 } else {
                     $htmlContent = $htmlContent . "<p>" . $line . "</p>";
                 }

@@ -25,3 +25,4 @@ Route::get('/search', [\App\Http\Controllers\ParserController::class, 'search'])
 
 //search by tags
 Route::get('/tags/{tag}', [\App\Http\Controllers\ParserController::class, 'searchByTag'])->name('view.search.tag');
+
