@@ -162,7 +162,7 @@ class ParserController extends Controller
     {
         $newFolders = [];
         foreach ($folders as $folder) {
-            $name = last(explode('/', $folder));
+            $name = last(preg_split('/[\/\\\\]+/', $folder));
             $newFolders[] = $name;
         }
 
